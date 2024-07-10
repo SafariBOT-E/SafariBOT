@@ -1,1 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map - Event 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .content {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .back-link {
+            display: block;
+            margin: 2rem 0;
+            text-align: center;
+            font-weight: bold;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .iframe-container {
+            margin: 2rem 0;
+        }
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .protected-content {
+            display: none;
+        }
+        .error {
+            color: red;
+            display: none;
+        }
+    </style>
+    <script src="password-protect.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="login">
+            <h2>Enter Password</h2>
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="checkPassword()">Submit</button>
+            <p class="error" id="error">Incorrect password. Please try again.</p>
+        </div>
+        <div class="protected-content" id="protected-content">
+            <header>
+                <h1>Map - Event 1</h1>
+            </header>
+            <div class="content">
+                <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-4zi107dP0vHfS-mxaaZh-Ersf7OOMI&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
+                </div>
+                <a href="event1.html" class="back-link">Back to Event 1</a>
+            </div>
+            <footer>
+                <p>&copy; 2024 Network Engineer Hub. All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
 
