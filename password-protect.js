@@ -4,7 +4,7 @@ function checkPassword() {
     const password = document.getElementById('password').value;
     const error = document.getElementById('error');
     if (password === correctPassword) {
-        localStorage.setItem('authenticated', 'true');
+        sessionStorage.setItem('authenticated', 'true');
         showProtectedContent();
     } else {
         error.style.display = 'block';
@@ -12,7 +12,7 @@ function checkPassword() {
 }
 
 function showProtectedContent() {
-    if (localStorage.getItem('authenticated') === 'true') {
+    if (sessionStorage.getItem('authenticated') === 'true') {
         document.getElementById('protected-content').style.display = 'block';
         document.querySelector('.login').style.display = 'none';
     }
