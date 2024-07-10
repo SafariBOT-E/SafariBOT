@@ -23,10 +23,10 @@
             text-align: center;
         }
         .content {
+            flex: 1;
             padding: 2rem;
             max-width: 1200px;
             margin: 0 auto;
-            flex: 1;
             display: flex;
             flex-direction: column;
         }
@@ -53,8 +53,8 @@
         }
         .iframe-container {
             flex: 1;
-            margin: 2rem 0;
             display: flex;
+            margin-bottom: 2rem;
         }
         .iframe-container iframe {
             width: 100%;
@@ -63,7 +63,6 @@
         }
         .back-link {
             display: block;
-            margin: 2rem 0;
             text-align: center;
             font-weight: bold;
             color: #4CAF50;
@@ -90,6 +89,9 @@
             nav ul li {
                 margin: 0.5rem 0;
             }
+            .iframe-container {
+                height: 50vh; /* Set a fixed height for smaller screens */
+            }
         }
         .container {
             text-align: center;
@@ -115,7 +117,7 @@
         </div>
         <div class="protected-content" id="protected-content">
             <header>
-                <h1>2024 US Open1</h1>
+                <h1>2024 US Open</h1>
             </header>
             <div class="content">
                 <nav>
