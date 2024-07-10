@@ -5,13 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page 3</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .protected-content {
+            display: none;
+        }
+        .error {
+            color: red;
+            display: none;
+        }
+    </style>
+    <script src="password-protect.js" defer></script>
 </head>
 <body>
-    <h1>Test2</h1>
- <div id="Container"
-     style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
-     <iframe allowfullscreen id="ViostreamIframe" width="100%" height="100%" src="https://safaritelecom.my-prtg.com/public/mapshow.htm?id=12835&mapid=56974757-500D-47A8-81BE-9B66EFC6DC36" frameborder="0" allowfullscreen="" style="position:absolute; top:0; left: 0"></iframe>
-</div>
-    <a href="home.html">Back to Home</a>
+    <div class="container">
+        <div class="login">
+            <h2>Enter Password</h2>
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="checkPassword()">Submit</button>
+            <p class="error" id="error">Incorrect password. Please try again.</p>
+        </div>
+        <div class="protected-content" id="protected-content">
+            <h1>Test2</h1>
+            <div id="Container" style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
+                <iframe allowfullscreen id="ViostreamIframe" width="100%" height="100%" src="https://safaritelecom.my-prtg.com/public/mapshow.htm?id=12835&mapid=56974757-500D-47A8-81BE-9B66EFC6DC36" frameborder="0" allowfullscreen="" style="position:absolute; top:0; left: 0"></iframe>
+            </div>
+            <a href="home.html">Back to Home</a>
+        </div>
+    </div>
 </body>
 </html>
