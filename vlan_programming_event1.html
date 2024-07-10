@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VLAN Programming - Event 1</title>
+    <title>VLAN Programming</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -12,6 +12,9 @@
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         header {
             background-color: #4CAF50;
@@ -23,15 +26,39 @@
             padding: 2rem;
             max-width: 1200px;
             margin: 0 auto;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            position: fixed;
-            bottom: 0;
+        nav {
+            margin-bottom: 2rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0.5rem 1rem;
+        }
+        nav ul li a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .iframe-container {
+            flex: 1;
+            margin: 2rem 0;
+        }
+        .iframe-container iframe {
             width: 100%;
+            height: calc(100vh - 300px); /* Adjust the height based on header, footer, and other content */
+            border: none;
         }
         .back-link {
             display: block;
@@ -44,8 +71,26 @@
         .back-link:hover {
             text-decoration: underline;
         }
-        .iframe-container {
-            margin: 2rem 0;
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .content {
+                padding: 1rem;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            .iframe-container iframe {
+                height: calc(100vh - 250px); /* Adjust for smaller screens */
+            }
         }
         .container {
             text-align: center;
@@ -71,13 +116,13 @@
         </div>
         <div class="protected-content" id="protected-content">
             <header>
-                <h1>VLAN Programming - Event 1</h1>
+                <h1>VLAN Programming - US Open</h1>
             </header>
             <div class="content">
                 <div class="iframe-container">
-                    <iframe class="airtable-embed" src="https://airtable.com/embed/app2c44EANdVW0CuG/shr4NbkBHA5CqsrEF?viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+                    <iframe class="airtable-embed" src="https://airtable.com/embed/app2c44EANdVW0CuG/shr4NbkBHA5CqsrEF?viewControls=on" frameborder="0" onmousewheel="" width="100%" style="background: transparent; border: 1px solid #ccc;"></iframe>
                 </div>
-                <a href="event1.html" class="back-link">Back</a>
+                <a href="event1.html" class="back-link">Back to Event 1</a>
             </div>
             <footer>
                 <p>&copy; 2024 Network Engineer Hub. All rights reserved.</p>
