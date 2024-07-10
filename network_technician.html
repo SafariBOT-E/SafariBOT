@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Technician Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .content {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        nav {
+            margin-bottom: 2rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .iframe-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 70vh; /* Adjust the height based on your needs */
+            margin-bottom: 2rem;
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .iframe-container {
+                height: 60vh; /* Adjust the height for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Network Technician</h1>
+    </header>
+    <div class="content">
+        <nav>
+            <ul>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="guru_safari_events.html">Guru</a></li>
+            </ul>
+        </nav>
+        <p>Active Events</p>
+        <div class="iframe-container">
+            <iframe allowfullscreen id="ViostreamIframe" src="https://airtable.com/embed/apprzlXDHUpGyMy2H/shrGCkyr7tF2MhXL2" frameborder="0"></iframe>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Network Engineer Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

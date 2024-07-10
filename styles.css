@@ -1,0 +1,45 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+html {
+    height: 100%; /* Ensure html takes full height */
+    background-color: black; /* Set the html background to black */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100%; /* Ensure body takes up full viewport height */
+    background-color: black; /* Set background color to black */
+    color: #00FF41; /* Set text color to green */
+}
+
+h1 {
+color: #00FF41;
+font-family: arial, sans-serif;
+font-size: 16px;
+font-weight: bold;
+margin-top: 0px;
+margin-bottom: 1px;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: green; /* Make links green */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+* {margin: 0; padding: 0}
+body {background: #000;}
+canvas {display: block;}
+

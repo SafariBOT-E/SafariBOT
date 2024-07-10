@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Engineer Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            background: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .iframe-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 70vh; /* Adjust the height based on your needs */
+            margin-bottom: 2rem;
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .iframe-container {
+                height: 50vh; /* Adjust the height for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Network Engineer Hub</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="remaining_events.html">Remaining Events</a></li>
+            <li><a href="management_view.html">Management View</a></li>
+            <li><a href="page3.html">Test 4</a></li>
+            <li><a href="network_technician.html">Network Technician</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <p>Active Events</p>
+        <div class="iframe-container">
+            <iframe src="https://airtable.com/embed/apprzlXDHUpGyMy2H/shrGCkyr7tF2MhXL2"></iframe>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Network Engineer Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
