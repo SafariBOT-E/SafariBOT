@@ -64,20 +64,42 @@
             padding: 1rem 0;
             width: 100%;
         }
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .protected-content {
+            display: none;
+        }
+        .error {
+            color: red;
+            display: none;
+        }
     </style>
+    <script src="password-protect.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Management View</h1>
-    </header>
-    <div class="content">
-        <div id="wrap">
-            <iframe id="scaled-frame" src="https://safaritelecom.my-prtg.com/public/mapshow.htm?id=5190&mapid=B8E14014-15A5-4FF8-B9D7-F0347B9704AE"></iframe>
+    <div class="container">
+        <div class="login">
+            <h2>Enter Password</h2>
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="checkPassword()">Submit</button>
+            <p class="error" id="error">Incorrect password. Please try again.</p>
         </div>
-        <a href="home.html" class="back-link">Back to Home</a>
+        <div class="protected-content" id="protected-content">
+            <header>
+                <h1>Management View</h1>
+            </header>
+            <div class="content">
+                <div id="wrap">
+                    <iframe id="scaled-frame" src="https://safaritelecom.my-prtg.com/public/mapshow.htm?id=5190&mapid=B8E14014-15A5-4FF8-B9D7-F0347B9704AE"></iframe>
+                </div>
+                <a href="home.html" class="back-link">Back to Home</a>
+            </div>
+            <footer>
+                <p>&copy; 2024 Network Engineer Hub. All rights reserved.</p>
+            </footer>
+        </div>
     </div>
-    <footer>
-        <p>&copy; 2024 Network Engineer Hub. All rights reserved.</p>
-    </footer>
 </body>
 </html>
