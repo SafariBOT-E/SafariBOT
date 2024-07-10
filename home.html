@@ -51,7 +51,7 @@
             position: relative;
             overflow: hidden;
             width: 100%;
-            height: 70vh; /* Adjust the height based on your needs */
+            height: 70vh;
             margin-bottom: 2rem;
         }
         .iframe-container iframe {
@@ -71,7 +71,7 @@
         }
         @media (max-width: 768px) {
             .iframe-container {
-                height: 50vh; /* Adjust the height for mobile */
+                height: 50vh;
             }
         }
         .container {
@@ -86,6 +86,7 @@
             display: none;
         }
     </style>
+    <script src="password-protect.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -96,7 +97,6 @@
             <p class="error" id="error">Incorrect password. Please try again.</p>
         </div>
         <div class="protected-content" id="protected-content">
-            <!-- Your existing content goes here -->
             <header>
                 <h1>Network Engineer Hub</h1>
             </header>
@@ -119,20 +119,5 @@
             </footer>
         </div>
     </div>
-    <script>
-        function checkPassword() {
-            const password = document.getElementById('password').value;
-            const error = document.getElementById('error');
-            const content = document.getElementById('protected-content');
-            const correctPassword = 'Safar1telecom'; // Set your password here
-
-            if (password === correctPassword) {
-                content.style.display = 'block';
-                document.querySelector('.login').style.display = 'none';
-            } else {
-                error.style.display = 'block';
-            }
-        }
-    </script>
 </body>
 </html>
