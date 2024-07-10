@@ -12,75 +12,6 @@
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        nav {
-            background: #333;
-            color: white;
-            display: flex;
-            justify-content: center;
-            padding: 1rem;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 1rem;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-        .content {
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .iframe-container {
-            flex: 1;
-            margin-bottom: 2rem;
-            position: relative;
-            height: calc(100vh - 200px); /* Adjust based on header and footer height */
-        }
-        .iframe-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-            background: transparent;
-            border: 1px solid #ccc;
-        }
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            width: 100%;
-            margin-top: auto;
-        }
-        @media (max-width: 768px) {
-            .iframe-container {
-                height: 50vh;
-            }
         }
         .container {
             text-align: center;
@@ -119,7 +50,7 @@
             <div class="content">
                 <p>Active Events</p>
                 <div class="iframe-container">
-                    <iframe class="airtable-embed" src="https://airtable.com/embed/apprzlXDHUpGyMy2H/shrGCkyr7tF2MhXL2?viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+                    <iframe src="https://airtable.com/embed/apprzlXDHUpGyMy2H/shrGCkyr7tF2MhXL2"></iframe>
                 </div>
             </div>
             <footer>
