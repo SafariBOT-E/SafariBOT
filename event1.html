@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         header {
             background-color: #4CAF50;
@@ -23,10 +23,10 @@
             text-align: center;
         }
         .content {
-            flex: 1;
             padding: 2rem;
             max-width: 1200px;
             margin: 0 auto;
+            flex: 1;
             display: flex;
             flex-direction: column;
         }
@@ -52,14 +52,24 @@
             text-decoration: underline;
         }
         .iframe-container {
-            width: 100%;
-            flex-grow: 1;
-            overflow: hidden;
+            flex: 1;
+            margin: 2rem 0;
         }
         .iframe-container iframe {
             width: 100%;
             height: 100%;
             border: none;
+        }
+        .back-link {
+            display: block;
+            margin: 2rem 0;
+            text-align: center;
+            font-weight: bold;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
         }
         footer {
             background: #333;
@@ -77,9 +87,6 @@
             }
             nav ul li {
                 margin: 0.5rem 0;
-            }
-            .iframe-container {
-                height: 50vh; /* Set a fixed height for smaller screens */
             }
         }
         .container {
@@ -106,7 +113,7 @@
         </div>
         <div class="protected-content" id="protected-content">
             <header>
-                <h1>2024 US Open2</h1>
+                <h1>2024 US Open</h1>
             </header>
             <div class="content">
                 <nav>
@@ -122,7 +129,7 @@
                 <div class="iframe-container">
                     <iframe class="airtable-embed" src="https://airtable.com/embed/app2c44EANdVW0CuG/shr1I7cLKJf8qd9lD?layout=card&viewControls=on" frameborder="0" onmousewheel="" style="background: transparent; border: 1px solid #ccc;"></iframe>
                 </div>
-                <a href="events.html">Back to Events</a>
+                <a href="events.html" class="back-link">Back to Events</a>
             </div>
             <footer>
                 <p>&copy; 2024 Network Engineer Hub. All rights reserved.</p>
