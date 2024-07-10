@@ -82,29 +82,51 @@
                 height: 50vh; /* Set a fixed height for smaller screens */
             }
         }
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .protected-content {
+            display: none;
+        }
+        .error {
+            color: red;
+            display: none;
+        }
     </style>
+    <script src="password-protect.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>2024 US Open</h1>
-    </header>
-    <div class="content">
-        <nav>
-            <ul>
-                <li><a href="vlan_programming_event1.html">VLAN Programming</a></li>
-                <li><a href="network_design_event1.html">Network Design</a></li>
-                <li><a href="deliverables_event1.html">Deliverables</a></li>
-                <li><a href="ap_deploy_event1.html">AP Deploy</a></li>
-            </ul>
-        </nav>
-        <p>Contacts</p>
-        <div class="iframe-container">
-            <iframe class="airtable-embed" src="https://airtable.com/embed/app2c44EANdVW0CuG/shr1I7cLKJf8qd9lD?layout=card&viewControls=on" frameborder="0" onmousewheel="" style="background: transparent; border: 1px solid #ccc;"></iframe>
+    <div class="container">
+        <div class="login">
+            <h2>Enter Password</h2>
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="checkPassword()">Submit</button>
+            <p class="error" id="error">Incorrect password. Please try again.</p>
         </div>
-        <a href="events.html">Back to Events</a>
+        <div class="protected-content" id="protected-content">
+            <header>
+                <h1>2024 US Open</h1>
+            </header>
+            <div class="content">
+                <nav>
+                    <ul>
+                        <li><a href="vlan_programming_event1.html">VLAN Programming</a></li>
+                        <li><a href="network_design_event1.html">Network Design</a></li>
+                        <li><a href="deliverables_event1.html">Deliverables</a></li>
+                        <li><a href="ap_deploy_event1.html">AP Deploy</a></li>
+                    </ul>
+                </nav>
+                <p>Contacts</p>
+                <div class="iframe-container">
+                    <iframe class="airtable-embed" src="https://airtable.com/embed/app2c44EANdVW0CuG/shr1I7cLKJf8qd9lD?layout=card&viewControls=on" frameborder="0" onmousewheel="" style="background: transparent; border: 1px solid #ccc;"></iframe>
+                </div>
+                <a href="events.html">Back to Events</a>
+            </div>
+            <footer>
+                <p>&copy; 2024 Network Engineer Hub. All rights reserved.</p>
+            </footer>
+        </div>
     </div>
-    <footer>
-        <p>&copy; 2024 Network Engineer Hub. All rights reserved.</p>
-    </footer>
 </body>
 </html>
