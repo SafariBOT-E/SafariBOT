@@ -12,9 +12,6 @@
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
         }
         header {
             background-color: #4CAF50;
@@ -22,42 +19,37 @@
             padding: 1rem 0;
             text-align: center;
         }
+        .content {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
         nav {
-            background: #333;
-            color: white;
-            display: flex;
-            justify-content: center;
-            padding: 1rem;
+            margin-bottom: 2rem;
         }
         nav ul {
             list-style: none;
             padding: 0;
+            display: flex;
+            justify-content: center;
         }
         nav ul li {
-            display: inline;
             margin: 0 1rem;
         }
         nav ul li a {
-            color: white;
+            color: #4CAF50;
             text-decoration: none;
             font-weight: bold;
         }
         nav ul li a:hover {
             text-decoration: underline;
         }
-        .content {
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
         .iframe-container {
-            flex: 1;
-            margin-bottom: 2rem;
             position: relative;
-            height: calc(100vh - 200px); /* Adjust based on header and footer height */
+            overflow: hidden;
+            width: 100%;
+            height: 70vh; /* Adjust the height based on your needs */
+            margin-bottom: 2rem;
         }
         .iframe-container iframe {
             position: absolute;
@@ -66,8 +58,6 @@
             width: 100%;
             height: 100%;
             border: 0;
-            background: transparent;
-            border: 1px solid #ccc;
         }
         footer {
             background: #333;
@@ -75,11 +65,10 @@
             text-align: center;
             padding: 1rem 0;
             width: 100%;
-            margin-top: auto;
         }
         @media (max-width: 768px) {
             .iframe-container {
-                height: 50vh;
+                height: 60vh; /* Adjust the height for mobile */
             }
         }
         .container {
