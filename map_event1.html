@@ -30,14 +30,34 @@
             display: flex;
             flex-direction: column;
         }
+        nav {
+            margin-bottom: 2rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0.5rem 1rem;
+        }
+        nav ul li a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
         .iframe-container {
             flex: 1;
             margin: 2rem 0;
-            display: flex;
         }
         .iframe-container iframe {
             width: 100%;
-            height: 100%;
+            height: calc(100vh - 300px); /* Adjust the height based on header, footer, and other content */
             border: none;
         }
         .back-link {
@@ -57,7 +77,20 @@
             text-align: center;
             padding: 1rem 0;
             width: 100%;
-            margin-top: auto;
+        }
+        @media (max-width: 768px) {
+            .content {
+                padding: 1rem;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            .iframe-container iframe {
+                height: calc(100vh - 250px); /* Adjust for smaller screens */
+            }
         }
         .container {
             text-align: center;
@@ -69,14 +102,6 @@
         .error {
             color: red;
             display: none;
-        }
-        @media (max-width: 768px) {
-            .content {
-                padding: 1rem;
-            }
-            .iframe-container {
-                height: 50vh; /* Set a fixed height for smaller screens */
-            }
         }
     </style>
     <script src="password-protect.js" defer></script>
@@ -95,7 +120,7 @@
             </header>
             <div class="content">
                 <div class="iframe-container">
-                    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-4zi107dP0vHfS-mxaaZh-Ersf7OOMI&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe>
+                    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-4zi107dP0vHfS-mxaaZh-Ersf7OOMI&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
                 </div>
                 <a href="event1.html" class="back-link">Back to Event 1</a>
             </div>
