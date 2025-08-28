@@ -4,44 +4,35 @@
   <meta charset="utf-8" />
   <title>Airtable Dashboard</title>
   <style>
-    body {
-      margin: 0;
-      background: #000; /* or transparent */
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 10px;
-    }
+    body { margin:0; background:#000; display:flex; justify-content:center; padding:10px; }
     .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr; /* 2 columns */
-      grid-auto-rows: 300px; /* match iframe height */
-      gap: 10px;
-      width: 100%;
-      max-width: 1400px; /* more breathing room */
+      display:grid;
+      grid-template-columns: 1fr 1fr;   /* two columns on top row */
+      grid-template-rows: 300px 300px;  /* top and bottom heights */
+      gap:10px;
+      width:100%;
+      max-width:1400px;
     }
     iframe {
-      width: 100%;
-      height: 300px;
-      border: 2px solid #00FFFF;
-      background: transparent;
-      overflow: hidden; /* cleaner look */
+      width:100%; height:100%;
+      border:2px solid #00FFFF;
+      background:transparent;
+      overflow:hidden;
     }
+    /* Make the bottom iframe stretch across both columns */
+    .bottom-span { grid-column: 1 / -1; }
   </style>
 </head>
 <body>
   <div class="grid">
     <!-- Top Left -->
-    <iframe src="https://airtable.com/embed/appN1fdS6r0xtOET8/shrBO7d4FPnOaZnwI" frameborder="0"></iframe>
+    <iframe src="https://airtable.com/embed/appN1fdS6r0xtOET8/shrBO7d4FPnOaZnwI?viewControls=off" frameborder="0"></iframe>
 
     <!-- Top Right -->
-    <iframe src="https://airtable.com/embed/appN1fdS6r0xtOET8/shrazec6B7auY2NHX" frameborder="0"></iframe>
+    <iframe src="https://airtable.com/embed/appN1fdS6r0xtOET8/shrazec6B7auY2NHX?viewControls=off" frameborder="0"></iframe>
 
-    <!-- Bottom Left -->
-    <iframe src="https://airtable.com/embed/appN1fdS6r0xtOET8/shrkMLsX2wYmPBSFV" frameborder="0"></iframe>
-
-    <!-- Bottom Right (empty for now) -->
-    <div></div>
+    <!-- Bottom (full width) -->
+    <iframe class="bottom-span" src="https://airtable.com/embed/appN1fdS6r0xtOET8/shrkMLsX2wYmPBSFV?viewControls=off" frameborder="0"></iframe>
   </div>
 </body>
 </html>
