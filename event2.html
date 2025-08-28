@@ -1,98 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Placeholder</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        .content {
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        nav {
-            margin-bottom: 2rem;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            margin: 0 1rem;
-        }
-        nav ul li a {
-            color: #4CAF50;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .container {
-            text-align: center;
-            margin-top: 50px;
-        }
-        .protected-content {
-            display: none;
-        }
-        .error {
-            color: red;
-            display: none;
-        }
-    </style>
-    <script src="password-protect.js" defer></script>
+  <meta charset="utf-8" />
+  <title>Airtable Dashboard - Event 2</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000; /* dark background */
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 10px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* 2 columns */
+      grid-auto-rows: 300px; /* same height as event1 */
+      gap: 10px;
+      width: 100%;
+      max-width: 1200px;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 2px solid #00FFFF;
+      background: transparent;
+      overflow: hidden;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="login">
-            <h2>Enter Password</h2>
-            <input type="password" id="password" placeholder="Password">
-            <button onclick="checkPassword()">Submit</button>
-            <p class="error" id="error">Incorrect password. Please try again.</p>
-        </div>
-        <div class="protected-content" id="protected-content">
-            <header>
-                <h1>Event Placeholder</h1>
-            </header>
-            <div class="content">
-                <nav>
-                    <ul>
-                        <li><a href="vlan_programming_event2.html">VLAN Programming</a></li>
-                        <li><a href="network_design_event2.html">Network Design</a></li>
-                        <li><a href="deliverables_event2.html">Deliverables</a></li>
-                    </ul>
-                </nav>
-                <a href="events.html">Back to Events</a>
-            </div>
-            <footer>
-                <p>&copy; 2024 Network Engineer Hub. All rights reserved.</p>
-            </footer>
-        </div>
-    </div>
+  <div class="grid">
+    <!-- Left -->
+    <iframe src="https://airtable.com/embed/appAdHCvFDXwaww3k/shrCdk8As1D7tjKsU" frameborder="0"></iframe>
+
+    <!-- Right -->
+    <iframe src="https://airtable.com/embed/appAdHCvFDXwaww3k/shrB1zfqBzCqrGXjD" frameborder="0"></iframe>
+  </div>
 </body>
 </html>
